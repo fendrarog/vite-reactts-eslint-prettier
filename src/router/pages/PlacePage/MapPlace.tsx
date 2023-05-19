@@ -3,8 +3,6 @@ import { useRef } from 'react';
 import Map, { Source, Layer, LayerProps, Popup, Marker } from 'react-map-gl';
 import geoJson from '../../../data/attractions.json';
 
-import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './layers';
-
 import type { MapRef } from 'react-map-gl';
 import type { GeoJSONSource } from 'react-map-gl';
 import GeoJSON, {

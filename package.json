@@ -1,12 +1,12 @@
 {
+  "homepage": "https://fendrarog.github.io/vite-reactts-eslint-prettier",
   "name": "vite-reactts-eslint-prettier",
   "version": "0.0.0",
-  "homepage": "https://fendrarog.github.io/vite-reactts-eslint-prettier",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "react-scripts build",
     "serve": "vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",

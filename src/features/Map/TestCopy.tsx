@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import geoJson from '../../data/data.json';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGl, { Marker, Popup, Layer } from 'react-map-gl';
 import { Link } from 'react-router-dom';
@@ -81,9 +80,6 @@ export const TestCopy = () => {
       style={{ width: '100%', height: '733px' }}
       onMove={(evt) => setViewState(evt.viewState)}
       onRender={(event) => event.target.resize()}
-      onViewportChange={(viewState: any) => {
-        setViewState(viewState);
-      }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={accessToken}
       styleDiffing
