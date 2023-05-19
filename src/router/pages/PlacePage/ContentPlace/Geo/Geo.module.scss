@@ -1,0 +1,23 @@
+.geo__body {
+     
+}
+.map {
+    margin-bottom: 10px;
+}
+.map__title {
+    color: #565656;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+}
+.map__text {
+    color: #565656;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 15px;
+
+    &:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}

@@ -1,0 +1,52 @@
+.openplaces{
+    margin-bottom: 35px;
+}
+
+.container {
+    max-width: 1063px;
+    margin: 0 auto;
+    padding: 61px 15px 0;
+    overflow: hidden;
+}
+
+.search {
+    width: 100%;
+    background-color: #fff;
+    padding: 31px 21px 31px 31px;
+    border-radius: 8px;
+    display: flex;
+    gap: 23px;
+    
+}
+
+.search__field {
+    height: 42px;
+    background-color: #fff;
+    border-radius: 9px;
+    border: 1px solid #248742;
+    padding: 12px 16px;
+    outline: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 18px;
+    flex: 1 1 auto;
+
+    &::placeholder{
+    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 18px;
+    }
+}
+
+
+.button {
+    background: #248742;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+

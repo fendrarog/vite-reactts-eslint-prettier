@@ -1,0 +1,18 @@
+.openinghours {
+    color: #565656;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 15px;
+}
+.openinghours__title {
+    color: #565656;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+}
+.openinghours__content {
+    & > *:not(:first-child) {
+        margin-top: 6px;
+    }
+}

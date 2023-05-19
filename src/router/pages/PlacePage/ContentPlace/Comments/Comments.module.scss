@@ -1,0 +1,118 @@
+.comments {
+
+}
+.comments__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #C3C3C3;
+}
+.comments__button {
+    color: #565656;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 40px;
+}
+.comments__rating {
+    padding: 0 30px 0 0;
+}
+.rating__header {
+    color: #565656;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
+}
+.rating__items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.rating__item {
+    cursor: pointer;
+    color: #565656;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 27px;
+    min-height: 27px;
+    border-radius: 5px;
+    border: 1px solid #565656;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comments__items {
+    & >*:not(:last-child) {
+        border-bottom: 1px solid #C3C3C3;
+    }
+}
+.comments__item {
+    padding: 15px 0;
+}
+.item__row {
+    display: flex;
+}
+.row__user {
+    flex: 1 1 25%;
+}
+.user__avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 70px;
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+.user__info {
+    font-family: Montserrat;
+    font-size: 13px;
+    line-height: 20px;
+    color: #565656;
+}
+.row__content {
+    flex: 1 1 75%;
+}
+.content__top {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.top__date {
+    font-family: Montserrat;
+    font-size: 11px;
+    line-height: 17px;
+    color: #565656;
+}
+.top__rating {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    color: #565656;
+}
+.rating_value{
+    background-color: #248742;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+.content__text {
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 25px;
+}
+.comments__more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

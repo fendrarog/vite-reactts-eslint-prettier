@@ -1,0 +1,138 @@
+
+.footer__container{
+    max-width: 1097px;
+    margin: 0 auto;
+    padding: 0 15px 5px;
+    overflow: hidden;
+}
+
+.footer__top {
+    padding: 25px 0;
+    border-bottom: .5px solid #c4c4c4;
+    display: flex;
+    gap: 20px;
+}
+
+.top__info {
+    flex: 1 0 calc(50% - 20px);
+}
+.info__search {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #fff;
+    margin: 0 0 30px;
+}
+.footer__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 7px;
+    line-height: 9px;
+    color: #8B8B8B;
+    margin: 0 0 20px;
+}
+.info__menu {
+
+}
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__item {
+
+}
+.menu__link {
+    text-decoration: none;
+    line-height: 25px;
+}
+.menu__text {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 11px;
+    color: #fff;
+}
+
+
+////////////////////////////////////////////////////News
+
+
+
+.top__news {
+    flex: 1 0 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.news_events {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 0 20px;
+}
+.event__link {
+    text-decoration: none;
+    line-height: 25px;
+}
+.event__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+}
+.news__socials {
+    display: flex;
+    gap: 13px;
+}
+.socials__item {
+
+}
+
+//////////////////////////////////////////////////////Bottom Footer
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 60px;
+}
+.bottom__logo {
+    font-family: Dongle;
+    font-size: 36px;
+    line-height: 52px;
+    color: #fff;
+}
+
+.bottom__copyright{
+    display: flex;
+    gap: 30px;
+}
+
+.copyright__link {
+    text-decoration: none;
+    line-height: 25px;
+}
+
+.copyright__text {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 9px;
+    color: #8B8B8B;
+}
+
+
+@media (max-width: 992px){
+    .footer__top {
+        flex-wrap: wrap;
+    }
+
+    .top__info {
+        flex: 1 0 100%;
+    }
+
+    .top__news {
+        flex: 1 0 100%;
+    }
+}

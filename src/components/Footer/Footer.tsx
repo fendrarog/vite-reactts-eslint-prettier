@@ -1,0 +1,103 @@
+import * as React from 'react';
+import style from './Footer.module.scss';
+import { Link } from 'react-router-dom';
+import telegram from '../../assets/icons/telegram.svg';
+import vk from '../../assets/icons/vk.svg';
+import youtube from '../../assets/icons/youtube.svg';
+
+const events = [
+  { id: 1, name: 'Фестиваль Тюльпанов в Санкт-Петербурге 20-21 мая' },
+  { id: 2, name: 'Алые паруса в Санкт-Петербурге 24 июня' },
+  { id: 3, name: 'День ВМФ в Санкт-Петербурге 30 июля' },
+];
+
+const Footer: React.FC = () => {
+  return (
+    <>
+      <div className={style.footer__container}>
+        <div className={style.footer__top}>
+          <div className={style.top__info}>
+            <div className={style.info__search}>Исследуй и открывай новые места</div>
+            <h6 className={style.footer__title}>Информация</h6>
+            <nav className={style.info__menu}>
+              <ul className={style.menu__list}>
+                <li className={style.menu__item}>
+                  <Link to="/aboutus" className={style.menu__link}>
+                    <p className={style.menu__text}>О проекте</p>
+                  </Link>
+                </li>
+                <li className={style.menu__item}>
+                  <Link to="/aboutus" className={style.menu__link}>
+                    <p className={style.menu__text}>Вопросы и ответы</p>
+                  </Link>
+                </li>
+                <li className={style.menu__item}>
+                  <Link to="/aboutus" className={style.menu__link}>
+                    <p className={style.menu__text}>Контакты</p>
+                  </Link>
+                </li>
+                <li className={style.menu__item}>
+                  <Link to="/aboutus" className={style.menu__link}>
+                    <p className={style.menu__text}>Обратная связь</p>
+                  </Link>
+                </li>
+                <li className={style.menu__item}>
+                  <Link to="/aboutus" className={style.menu__link}>
+                    <p className={style.menu__text}>Новости</p>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className={style.top__news}>
+            <h6 className={style.footer__title}>Новости</h6>
+            <div className={style.news_events}>
+              {events.map((news) => (
+                <Link key={news.id} to={`/news/${news.id}`} className={style.event__link}>
+                  <p key={news.id} className={style.event__text}>
+                    {news.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <div className={style.news__socials}>
+              <div className={style.socials__item}>
+                <img src={telegram} alt="telegram" />
+              </div>
+              <div className={style.socials__item}>
+                <img src={vk} alt="vk" />
+              </div>
+              <div className={style.socials__item}>
+                <img src={youtube} alt="youtube" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={style.footer__bottom}>
+          <div className={style.bottom__logo}>Novitravel</div>
+          <ul className={style.bottom__copyright}>
+            <li className={style.copyright__item}>
+              <Link to="/copyright" className={style.copyright__link}>
+                <p className={style.copyright__text}>Политика конфиденциальности</p>
+              </Link>
+            </li>
+            <li className={style.copyright__item}>
+              <Link to="/copyright" className={style.copyright__link}>
+                <p className={style.copyright__text}>Пользовательское соглашение</p>
+              </Link>
+            </li>
+            <li className={style.copyright__item}>
+              <Link to="/copyright" className={style.copyright__link}>
+                <p className={style.copyright__text}>COPYRIGHT</p>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Footer;

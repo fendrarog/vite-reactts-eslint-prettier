@@ -1,0 +1,31 @@
+.container{
+    max-width: 1366px;
+    margin: 0 auto;
+    margin-bottom: 52px;
+    overflow: hidden;
+    // margin-top: -400px;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.map {
+    position: relative;
+    background-color: #fff;
+    border-radius: 22px;
+    padding: 23px 21px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+
+    
+}
+
+.button {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: #248742;
+    width: 150px;
+    color: #ffff;
+}

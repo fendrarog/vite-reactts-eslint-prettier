@@ -1,0 +1,41 @@
+.subview {
+    background-color: #fff;
+    box-shadow: 0px, 4px, 4px, rgba(0, 0, 0, 0.25);
+}
+.subview__container {
+    max-width: 1097px;
+    margin: 0 auto;
+    padding: 15px;
+    overflow: hidden;
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+}
+.subview__button {
+    background: #248742;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 52px;
+}
+.options {
+    display: flex;
+    gap: 23px;
+}
+.option {
+    min-width: 52px;
+    min-height: 52px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
