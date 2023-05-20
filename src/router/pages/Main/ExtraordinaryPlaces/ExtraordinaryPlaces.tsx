@@ -11,19 +11,19 @@ import ShowAll from '../../../../components/ShowAll/ShowAll';
 const cards = [
   {
     id: 1,
-    image: './src/assets/images/01.png',
+    image: '../src/assets/images/01.png',
     title: 'Гамсутль',
     description: 'Республика Дагестан, Гунибский район',
   },
   {
     id: 2,
-    image: './src/assets/images/02.png',
+    image: '../src/assets/images/02.png',
     title: 'Рыбацкая деревня в рязанской области',
     description: 'Рыбацкая деревня, село Шумашь',
   },
   {
     id: 3,
-    image: './src/assets/images/03.png',
+    image: '../src/assets/images/03.png',
     title: 'Териберка',
     description: 'Мурманская обл., Кольский район',
   },
