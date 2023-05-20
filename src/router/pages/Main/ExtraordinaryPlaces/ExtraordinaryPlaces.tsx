@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import style from './ExtraordinaryPlaces.module.scss';
-import pic1 from './vite-reactts-eslint-prettier/../../../../../assets/images/01.png';
+import pic1 from './../../../../assets/images/01.png';
 import pic2 from './../../../../assets/images/02.png';
 import pic3 from './../../../../assets/images/03.png';
 import pic4 from './../../../../assets/images/04.png';
@@ -11,19 +11,19 @@ import ShowAll from '../../../../components/ShowAll/ShowAll';
 const cards = [
   {
     id: 1,
-    image: pic1,
+    image: './src/assets/images/01.png',
     title: 'Гамсутль',
     description: 'Республика Дагестан, Гунибский район',
   },
   {
     id: 2,
-    image: pic2,
+    image: './src/assets/images/02.png',
     title: 'Рыбацкая деревня в рязанской области',
     description: 'Рыбацкая деревня, село Шумашь',
   },
   {
     id: 3,
-    image: pic3,
+    image: './src/assets/images/03.png',
     title: 'Териберка',
     description: 'Мурманская обл., Кольский район',
   },
