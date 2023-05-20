@@ -1,10 +1,5 @@
 import { Button } from 'antd';
 import style from './ExtraordinaryPlaces.module.scss';
-import pic1 from '../../../../../public/images/01.png';
-import pic2 from '../../../../../public/images/02.png';
-import pic3 from '../../../../../public/images/03.png';
-import pic4 from '../../../../../public/images/04.png';
-import pic5 from '../../../../../public/images/05.png';
 import TitlePage from '../../../../components/Title';
 import ShowAll from '../../../../components/ShowAll/ShowAll';
 
@@ -29,19 +24,19 @@ const cards = [
   },
   {
     id: 4,
-    image: pic4,
+    image: './images/04.png',
     title: 'Отель «Семигорье»',
     description: 'Ивановская область',
   },
   {
     id: 5,
-    image: pic5,
+    image: './images/05.png',
     title: 'Хаски Сафари',
     description: 'Финляндия, Северная Остроботния',
   },
   {
     id: 6,
-    image: pic3,
+    image: './images/03.png',
     title: 'Териберка',
     description: 'Мурманская обл., Кольский район',
   },
