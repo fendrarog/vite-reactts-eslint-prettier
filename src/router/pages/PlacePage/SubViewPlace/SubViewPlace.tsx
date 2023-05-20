@@ -2,7 +2,6 @@ import * as React from 'react';
 import style from './SubViewPlace.module.scss';
 import { MdOutlineAddLocationAlt } from 'react-icons/md';
 import { Button } from 'antd';
-import { AiOutlineHeart } from 'react-icons/ai';
 import like from '../../../../../public/icons/Like.svg';
 import addPhoto from '../../../../../public/icons/AddPhoto.svg';
 import share from '../../../../../public/icons/Share.svg';
@@ -13,17 +12,17 @@ import { GeoJsonProperties } from 'geojson';
 const options = [
   {
     alt: 'like',
-    img: like,
+    img: '/icons/Like.svg',
     color: '#FF7B7B',
   },
   {
     alt: 'addPhoto',
-    img: addPhoto,
+    img: '/icons/AddPhoto.svg',
     color: '#53B7FF',
   },
   {
     alt: 'share',
-    img: share,
+    img: '/icons/Share.svg',
     color: '#53B7FF',
   },
 ];

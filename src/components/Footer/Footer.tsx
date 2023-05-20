@@ -1,9 +1,6 @@
 import * as React from 'react';
 import style from './Footer.module.scss';
 import { Link } from 'react-router-dom';
-import telegram from '../../../public/icons/telegram.svg';
-import vk from '../../../public/icons/vk.svg';
-import youtube from '../../../public/icons/youtube.svg';
 
 import news from '../../data/news.json';
 

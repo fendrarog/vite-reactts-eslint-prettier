@@ -12,13 +12,13 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
     <div
       className={style.view}
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images${info?.properties.photo_link}")`,
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images${info?.properties.photo_link}")`,
       }}
     >
       <div
         className={style.view__container}
         style={{
-          backgroundImage: `url("./images${info?.properties.photo_link}")`,
+          backgroundImage: `url("/images${info?.properties.photo_link}")`,
         }}
       >
         <div className={style.body}>
