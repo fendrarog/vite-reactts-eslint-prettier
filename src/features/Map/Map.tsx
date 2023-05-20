@@ -259,9 +259,9 @@ export const Map = () => {
           gap: '10px',
         }}
       >
-        <p>Широта: {viewState.latitude}</p>
-        <p>Долгота: {viewState.longitude}</p>
-        <p>Увеличение: {viewState.zoom}</p>
+        <p>Широта: {viewState.latitude.toFixed(3)}</p>
+        <p>Долгота: {viewState.longitude.toFixed(3)}</p>
+        <p>Увеличение: {viewState.zoom.toFixed(3)}</p>
       </div>
     </>
   );
