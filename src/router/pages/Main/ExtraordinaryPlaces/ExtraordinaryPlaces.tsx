@@ -1,10 +1,10 @@
 import { Button } from 'antd';
 import style from './ExtraordinaryPlaces.module.scss';
-import pic1 from '../../../../assets/images/01.png';
-import pic2 from '../../../../assets/images/02.png';
-import pic3 from '../../../../assets/images/03.png';
-import pic4 from '../../../../assets/images/04.png';
-import pic5 from '../../../../assets/images/05.png';
+import pic1 from './../../../../assets/images/01.png';
+import pic2 from './../../../../assets/images/02.png';
+import pic3 from './../../../../assets/images/03.png';
+import pic4 from './../../../../assets/images/04.png';
+import pic5 from './../../../../assets/images/05.png';
 import TitlePage from '../../../../components/Title';
 import ShowAll from '../../../../components/ShowAll/ShowAll';
 
