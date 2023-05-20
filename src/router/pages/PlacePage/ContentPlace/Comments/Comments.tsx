@@ -1,28 +1,11 @@
 import style from './Comments.module.scss';
 import { Button } from 'antd';
 import { SlPencil } from 'react-icons/sl';
-import testavatar1 from '../../../../../assets/images/testavatar1.png';
-import testavatar2 from '../../../../../assets/images/testavatar2.png';
+import testavatar1 from '../../../../../../public/assets/images/testavatar1.png';
+import testavatar2 from '../../../../../../public/assets/images/testavatar2.png';
 import ShowAll from '../../../../../components/ShowAll/ShowAll';
 import review from '../../../../../data/review.json';
 import { months } from '../../../../../data/ratio';
-
-const usersComments = [
-  {
-    userImage: testavatar1,
-    userName: 'Мария Иванова',
-    date: '22 мая 2022',
-    rating: 5,
-    text: 'Тебердинский заповедник- сказочно красивый уголок нашей Родины.❤ Сюда хочется вернуться снова! Я просто влюбилась в эти волшебные места. Место замечательное, огромная территория в лесу, все идеально чисто, на территории бесплатный музей, отличный зоопарк, небольшой рыночные с национальными продуктами и разными видами чая.',
-  },
-  {
-    userImage: testavatar2,
-    userName: 'Иван Иванов',
-    date: '13 июля 2022',
-    rating: 5,
-    text: 'Будете рядом и особенно с детьми - потратьте немного времени и денег на посещение музея и вольеров, за доп.плату можно зайти в эспозиционный центр. Музей заповедника небольшой, но содержит полную информацию о геологии, флоре и фауне заповедника, а также об истории создания.  При желании на территории можно снять жилье - об этом видел объявление. Есть внутри торговля обычными сувенирами, но продавцы сильно не докучают',
-  },
-];
 
 const dateParse = (entry: number) => {
   const date = new Date(entry);

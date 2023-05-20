@@ -13,9 +13,9 @@ import GeoJSON, {
 } from 'geojson';
 import MapImage from './MapImage';
 import { Link } from 'react-router-dom';
-import car from '../../assets/icons/car.svg';
-import like from '../../assets/icons/redlike.svg';
-import testpopup from '../../assets/images/testpopup.png';
+import car from '../../../public/assets/icons/car.svg';
+import like from '../../../public/assets/icons/redlike.svg';
+import testpopup from '../../../public/assets/images/testpopup.png';
 
 const MAPBOX_TOKEN =
   'pk.eyJ1Ijoic211c29sb3YiLCJhIjoiY2xobTJib2psMTgzNjNqcDEyNGlnbHo3bSJ9.abBvILy34RqG0sw4yYa8Tg'; // Set your mapbox token here
@@ -106,7 +106,7 @@ export const Map = () => {
           setPopupInfo(evt.features[0]);
           console.log(evt.features[0]);
         }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapStyle="mapbox://styles/smusolov/clh3ek1fm00mz01pg0mze8jl2"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         <MapImage />
@@ -247,7 +247,25 @@ export const Map = () => {
           </Popup>
         )}
       </ReactMapGl>
-      6;
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '23px',
+          left: '21px',
+          fontWeight: '700',
+          fontSize: '16px',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          color: 'white',
+          padding: '15px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px',
+        }}
+      >
+        <p>Широта: {viewState.latitude}</p>
+        <p>Долгота: {viewState.longitude}</p>
+        <p>Увеличение: {viewState.zoom}</p>
+      </div>
     </>
   );
 };

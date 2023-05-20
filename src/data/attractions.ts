@@ -1,4 +1,4 @@
-export const attractions = [
+export const attractions123124 = [
   {
     countryID: 'RU',
     regionID: 9,

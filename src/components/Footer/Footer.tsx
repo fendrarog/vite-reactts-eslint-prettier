@@ -1,9 +1,9 @@
 import * as React from 'react';
 import style from './Footer.module.scss';
 import { Link } from 'react-router-dom';
-import telegram from '../../assets/icons/telegram.svg';
-import vk from '../../assets/icons/vk.svg';
-import youtube from '../../assets/icons/youtube.svg';
+import telegram from '../../../public/assets/icons/telegram.svg';
+import vk from '../../../public/assets/icons/vk.svg';
+import youtube from '../../../public/assets/icons/youtube.svg';
 
 import news from '../../data/news.json';
 

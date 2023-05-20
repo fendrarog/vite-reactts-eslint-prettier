@@ -7,12 +7,12 @@ import { BsCloudSun, BsStars } from 'react-icons/bs';
 import { RiHotelLine } from 'react-icons/ri';
 import { AiOutlineCar } from 'react-icons/ai';
 import { SlHandbag } from 'react-icons/sl';
-import icon1 from '../../../../assets/images/creation1.svg';
-import icon2 from '../../../../assets/images/creation2.svg';
-import icon3 from '../../../../assets/images/creation3.svg';
-import icon4 from '../../../../assets/images/creation4.svg';
-import icon5 from '../../../../assets/images/creation5.svg';
-import icon6 from '../../../../assets/images/creation6.svg';
+import icon1 from '../../../../../public/assets/images/creation1.svg';
+import icon2 from '../../../../../public/assets/images/creation2.svg';
+import icon3 from '../../../../../public/assets/images/creation3.svg';
+import icon4 from '../../../../../public/assets/images/creation4.svg';
+import icon5 from '../../../../../public/assets/images/creation5.svg';
+import icon6 from '../../../../../public/assets/images/creation6.svg';
 
 const travelCreation = [
   { text: 'Открывай уникальные места', icon: icon1 },

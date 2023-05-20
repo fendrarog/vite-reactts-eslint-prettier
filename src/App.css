@@ -29,3 +29,11 @@ li {
 .mapboxgl-popup-tip {
   display: none;
 }
+
+.mapboxgl-ctrl-attrib-inner {
+  display: none;
+}
+
+a.mapboxgl-ctrl-logo {
+  display: none;
+}
