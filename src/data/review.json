@@ -12,7 +12,7 @@
     "attraction_id": 15
   },
   {
-    "review_id": 1,
+    "review_id": 2,
     "author": "slava_cosmos",
     "user_avatar": null,
     "user_rating": 5,
@@ -24,7 +24,7 @@
     "attraction_id": 1
   },
   {
-    "review_id": 1,
+    "review_id": 3,
     "author": "vasya_cosmonavt",
     "user_avatar": null,
     "user_rating": 5,
@@ -32,7 +32,7 @@
     "review_text": "Место замечательное",
     "review_date": 1671667200000,
     "review_status": "published",
-    "review_rating": 5,
+    "review_rating": 2,
     "attraction_id": 100
   }
 ]

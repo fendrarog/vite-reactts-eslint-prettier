@@ -9,8 +9,18 @@ interface ViewPlacePropsType {
 
 const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
   return (
-    <div className={style.view}>
-      <div className={style.view__container}>
+    <div
+      className={style.view}
+      style={{
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/assets/images${info?.properties.photo_link}")`,
+      }}
+    >
+      <div
+        className={style.view__container}
+        style={{
+          backgroundImage: `url("../src/assets/images${info?.properties.photo_link}")`,
+        }}
+      >
         <div className={style.body}>
           <div className={style.top}>
             <p className={style.location}>{`${

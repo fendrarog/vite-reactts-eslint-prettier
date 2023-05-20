@@ -4,6 +4,8 @@ import { SlPencil } from 'react-icons/sl';
 import testavatar1 from '../../../../../assets/images/testavatar1.png';
 import testavatar2 from '../../../../../assets/images/testavatar2.png';
 import ShowAll from '../../../../../components/ShowAll/ShowAll';
+import review from '../../../../../data/review.json';
+import { months } from '../../../../../data/ratio';
 
 const usersComments = [
   {
@@ -21,6 +23,14 @@ const usersComments = [
     text: 'Будете рядом и особенно с детьми - потратьте немного времени и денег на посещение музея и вольеров, за доп.плату можно зайти в эспозиционный центр. Музей заповедника небольшой, но содержит полную информацию о геологии, флоре и фауне заповедника, а также об истории создания.  При желании на территории можно снять жилье - об этом видел объявление. Есть внутри торговля обычными сувенирами, но продавцы сильно не докучают',
   },
 ];
+
+const dateParse = (entry: number) => {
+  const date = new Date(entry);
+  const day = String(date.getDate());
+  const month = months[date.getMonth()];
+  const year = String(date.getFullYear());
+  return `${day} ${month} ${year}`;
+};
 
 const Comments: React.FC = () => {
   return (
@@ -42,32 +52,47 @@ const Comments: React.FC = () => {
       </div>
       <div className={style.comments__content}>
         <div className={style.comments__items}>
-          {usersComments.map((comment, i) => (
+          {review.map((comment, i) => (
             <div key={i} className={style.comments__item}>
               <div className={style.item__row}>
                 <div className={style.row__user}>
                   <div className={style.user__avatar}>
-                    <img src={comment.userImage} alt="avatar" />
+                    <img
+                      src={comment.user_avatar ? comment.user_avatar : testavatar1}
+                      alt="avatar"
+                    />
                   </div>
                   <p className={style.user__info}>Отзыв от</p>
                   <p
                     className={style.user__info}
                     style={{ color: '#248742', fontWeight: '700' }}
                   >
-                    {comment.userName}
+                    {comment.author}
                   </p>
                 </div>
                 <div className={style.row__content}>
                   <div className={style.content__top}>
-                    <div className={style.top__date}>{comment.date}</div>
+                    <div className={style.top__date}>
+                      {dateParse(comment.review_date)}
+                    </div>
                     <div className={style.top__rating}>
                       Оценка{' '}
-                      <span className={style.rating_value}>
-                        {comment.rating.toFixed(1)}
+                      <span
+                        className={style.rating_value}
+                        style={{
+                          backgroundColor:
+                            comment.review_rating < 4 && comment.review_rating >= 3
+                              ? 'orange'
+                              : comment.review_rating < 3
+                              ? 'red'
+                              : '#248742',
+                        }}
+                      >
+                        {comment.review_rating.toFixed(1)}
                       </span>
                     </div>
                   </div>
-                  <div className={style.content__text}>{comment.text}</div>
+                  <div className={style.content__text}>{comment.review_text}</div>
                 </div>
               </div>
             </div>

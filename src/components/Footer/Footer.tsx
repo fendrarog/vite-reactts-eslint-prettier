@@ -5,6 +5,8 @@ import telegram from '../../assets/icons/telegram.svg';
 import vk from '../../assets/icons/vk.svg';
 import youtube from '../../assets/icons/youtube.svg';
 
+import news from '../../data/news.json';
+
 const events = [
   { id: 1, name: 'Фестиваль Тюльпанов в Санкт-Петербурге 20-21 мая' },
   { id: 2, name: 'Алые паруса в Санкт-Петербурге 24 июня' },
@@ -53,23 +55,45 @@ const Footer: React.FC = () => {
           <div className={style.top__news}>
             <h6 className={style.footer__title}>Новости</h6>
             <div className={style.news_events}>
-              {events.map((news) => (
-                <Link key={news.id} to={`/news/${news.id}`} className={style.event__link}>
-                  <p key={news.id} className={style.event__text}>
-                    {news.name}
+              {news.map((news) => (
+                <Link
+                  key={news.news_id}
+                  to={`/news/${news.news_id}`}
+                  className={style.event__link}
+                >
+                  <p key={news.news_id} className={style.event__text}>
+                    {news.news_text}
                   </p>
                 </Link>
               ))}
             </div>
             <div className={style.news__socials}>
               <div className={style.socials__item}>
-                <img src={telegram} alt="telegram" />
+                <a
+                  href="https://ru.wikipedia.org/wiki/Telegram"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img src={telegram} alt="telegram" />
+                </a>
               </div>
               <div className={style.socials__item}>
-                <img src={vk} alt="vk" />
+                <a
+                  href="https://ru.wikipedia.org/wiki/Vkontakte"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img src={vk} alt="vk" />
+                </a>
               </div>
               <div className={style.socials__item}>
-                <img src={youtube} alt="youtube" />
+                <a
+                  href="https://ru.wikipedia.org/wiki/Youtube"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img src={youtube} alt="youtube" />
+                </a>
               </div>
             </div>
           </div>
