@@ -6,37 +6,37 @@ import ShowAll from '../../../../components/ShowAll/ShowAll';
 const cards = [
   {
     id: 1,
-    image: './images/01.png',
+    image: '../images/01.png',
     title: 'Гамсутль',
     description: 'Республика Дагестан, Гунибский район',
   },
   {
     id: 2,
-    image: './images/02.png',
+    image: '../images/02.png',
     title: 'Рыбацкая деревня в рязанской области',
     description: 'Рыбацкая деревня, село Шумашь',
   },
   {
     id: 3,
-    image: './images/03.png',
+    image: '../images/03.png',
     title: 'Териберка',
     description: 'Мурманская обл., Кольский район',
   },
   {
     id: 4,
-    image: './images/04.png',
+    image: '../images/04.png',
     title: 'Отель «Семигорье»',
     description: 'Ивановская область',
   },
   {
     id: 5,
-    image: './images/05.png',
+    image: '../images/05.png',
     title: 'Хаски Сафари',
     description: 'Финляндия, Северная Остроботния',
   },
   {
     id: 6,
-    image: './images/03.png',
+    image: '../images/03.png',
     title: 'Териберка',
     description: 'Мурманская обл., Кольский район',
   },
