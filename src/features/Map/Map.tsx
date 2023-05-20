@@ -62,8 +62,6 @@ export const Map = () => {
       'text-field': ['get', 'name'],
       'text-anchor': 'bottom',
       'text-offset': [0, -1.5],
-      'icon-ignore-placement': true,
-      'text-ignore-placement': true,
     },
     paint: {
       'text-color': 'purple',
