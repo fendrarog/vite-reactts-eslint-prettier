@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Input, Typography, Card, Row, Col, Layout as Lay } from 'antd';
 import style from './Header.module.scss';
-import logo from '../../../public/assets/icons/logo.svg';
+import logo from '../../../public/icons/logo.svg';
 
 const { Text } = Typography;
 

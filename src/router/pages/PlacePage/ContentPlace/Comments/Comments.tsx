@@ -1,8 +1,8 @@
 import style from './Comments.module.scss';
 import { Button } from 'antd';
 import { SlPencil } from 'react-icons/sl';
-import testavatar1 from '../../../../../../public/assets/images/testavatar1.png';
-import testavatar2 from '../../../../../../public/assets/images/testavatar2.png';
+import testavatar1 from '../../../../../../public/images/testavatar1.png';
+import testavatar2 from '../../../../../../public/images/testavatar2.png';
 import ShowAll from '../../../../../components/ShowAll/ShowAll';
 import review from '../../../../../data/review.json';
 import { months } from '../../../../../data/ratio';

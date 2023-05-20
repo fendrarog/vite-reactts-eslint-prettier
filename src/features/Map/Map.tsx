@@ -13,9 +13,9 @@ import GeoJSON, {
 } from 'geojson';
 import MapImage from './MapImage';
 import { Link } from 'react-router-dom';
-import car from '../../../public/assets/icons/car.svg';
-import like from '../../../public/assets/icons/redlike.svg';
-import testpopup from '../../../public/assets/images/testpopup.png';
+import car from '../../../public/icons/car.svg';
+import like from '../../../public/icons/redlike.svg';
+import testpopup from '../../../public/images/testpopup.png';
 
 const MAPBOX_TOKEN =
   'pk.eyJ1Ijoic211c29sb3YiLCJhIjoiY2xobTJib2psMTgzNjNqcDEyNGlnbHo3bSJ9.abBvILy34RqG0sw4yYa8Tg'; // Set your mapbox token here

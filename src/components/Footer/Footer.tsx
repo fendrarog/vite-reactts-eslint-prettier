@@ -1,9 +1,9 @@
 import * as React from 'react';
 import style from './Footer.module.scss';
 import { Link } from 'react-router-dom';
-import telegram from '../../../public/assets/icons/telegram.svg';
-import vk from '../../../public/assets/icons/vk.svg';
-import youtube from '../../../public/assets/icons/youtube.svg';
+import telegram from '../../../public/icons/telegram.svg';
+import vk from '../../../public/icons/vk.svg';
+import youtube from '../../../public/icons/youtube.svg';
 
 import news from '../../data/news.json';
 
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <img src={telegram} alt="telegram" />
+                  <img src={'./icons/telegram.svg'} alt="telegram" />
                 </a>
               </div>
               <div className={style.socials__item}>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <img src={vk} alt="vk" />
+                  <img src={'./icons/vk.svg'} alt="vk" />
                 </a>
               </div>
               <div className={style.socials__item}>
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <img src={youtube} alt="youtube" />
+                  <img src={'./icons/youtube.svg'} alt="youtube" />
                 </a>
               </div>
             </div>
