@@ -20,7 +20,7 @@ const ExtraordinaryPlaces: React.FC = () => {
             <div key={i} className={style.item}>
               <div className={style.image}>
                 <img
-                  src={`./vite-reactts-eslint-prettier/images${place.photo_link[0]}`}
+                  src={`vite-reactts-eslint-prettier/images${place.photo_link[0]}`}
                   alt={'img'}
                 />
                 {/* <img src={gg} alt={'gg'} /> */}

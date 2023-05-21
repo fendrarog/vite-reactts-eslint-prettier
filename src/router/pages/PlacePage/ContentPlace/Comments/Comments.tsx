@@ -43,7 +43,7 @@ const Comments: React.FC = () => {
                     <img
                       src={
                         comment.user_avatar ||
-                        './vite-reactts-eslint-prettier/images/testavatar1.png'
+                        'vite-reactts-eslint-prettier/images/testavatar1.png'
                       }
                       alt="avatar"
                     />

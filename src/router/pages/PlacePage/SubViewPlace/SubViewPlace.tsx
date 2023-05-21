@@ -12,17 +12,17 @@ import { GeoJsonProperties } from 'geojson';
 const options = [
   {
     alt: 'like',
-    img: './vite-reactts-eslint-prettier/icons/Like.svg',
+    img: 'vite-reactts-eslint-prettier/icons/Like.svg',
     color: '#FF7B7B',
   },
   {
     alt: 'addPhoto',
-    img: './vite-reactts-eslint-prettier/icons/AddPhoto.svg',
+    img: 'vite-reactts-eslint-prettier/icons/AddPhoto.svg',
     color: '#53B7FF',
   },
   {
     alt: 'share',
-    img: './vite-reactts-eslint-prettier/icons/Share.svg',
+    img: 'vite-reactts-eslint-prettier/icons/Share.svg',
     color: '#53B7FF',
   },
 ];

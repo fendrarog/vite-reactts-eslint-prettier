@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                 >
                   <img
-                    src={'./vite-reactts-eslint-prettier/icons/telegram.svg'}
+                    src={'vite-reactts-eslint-prettier/icons/telegram.svg'}
                     alt="telegram"
                   />
                 </a>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <img src={'./vite-reactts-eslint-prettier/icons/vk.svg'} alt="vk" />
+                  <img src={'vite-reactts-eslint-prettier/icons/vk.svg'} alt="vk" />
                 </a>
               </div>
               <div className={style.socials__item}>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                 >
                   <img
-                    src={'./vite-reactts-eslint-prettier/icons/youtube.svg'}
+                    src={'vite-reactts-eslint-prettier/icons/youtube.svg'}
                     alt="youtube"
                   />
                 </a>

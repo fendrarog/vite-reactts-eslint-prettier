@@ -28,25 +28,25 @@ const comfort: any = [
 
 const hotels = [
   {
-    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
   },
   {
-    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',

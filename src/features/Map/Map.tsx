@@ -150,7 +150,7 @@ export const Map = () => {
                 <div>
                   <div style={{ borderRadius: '6px', overflow: 'hidden' }}>
                     <img
-                      src={'./vite-reactts-eslint-prettier/images/testpopup.png'}
+                      src={'vite-reactts-eslint-prettier/images/testpopup.png'}
                       alt="picplace"
                     />
                   </div>
@@ -202,7 +202,7 @@ export const Map = () => {
                   }}
                 >
                   <img
-                    src={'./vite-reactts-eslint-prettier/icons/redlike.svg'}
+                    src={'vite-reactts-eslint-prettier/icons/redlike.svg'}
                     alt="like"
                   />
                 </div>
@@ -232,7 +232,7 @@ export const Map = () => {
                     height: '29px',
                   }}
                 >
-                  <img src={'./vite-reactts-eslint-prettier/icons/car.svg'} alt="route" />
+                  <img src={'vite-reactts-eslint-prettier/icons/car.svg'} alt="route" />
                 </div>
                 <div
                   style={{
