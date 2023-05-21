@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { useRef } from 'react';
 import ReactMapGl, { Source, Layer, LayerProps, Popup } from 'react-map-gl';
-import geoJson from '../../data/attractions.json';
-
-import type { MapRef } from 'react-map-gl';
-import type { GeoJSONSource } from 'react-map-gl';
+import attractionsGeo from '../../data/09Geo.json';
 import GeoJSON, {
   FeatureCollection,
   GeoJsonProperties,
@@ -44,16 +41,16 @@ export const Map = () => {
   const [popupInfo, setPopupInfo] = React.useState<null | GeoJsonProperties>(null);
   console.log(viewState);
 
-  const layerStyleText: LayerProps = {
-    id: 'foo',
+  const layerStyleAttractions: LayerProps = {
+    id: 'attractions',
     type: 'symbol',
     layout: {
       'icon-image': '01', // reference the image
       'icon-size': {
         base: 1.75,
         stops: [
-          [12, 0.2],
-          [22, 0.5],
+          [12, 0.3],
+          [22, 0.2],
         ],
       },
       'text-field': ['get', 'name'],
@@ -95,7 +92,7 @@ export const Map = () => {
         style={{ width: '100%', height: '733px' }}
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
-        interactiveLayerIds={['foo', 'point']}
+        interactiveLayerIds={['attractions', 'point']}
         onRender={(event) => event.target.resize()}
         onClick={(evt) => {
           if (!evt.features) return;
@@ -110,10 +107,10 @@ export const Map = () => {
         <Source
           id="my-data"
           type="geojson"
-          data={geoJson as FeatureCollection<Geometry, GeoJsonProperties>}
+          data={attractionsGeo as FeatureCollection<Geometry, GeoJsonProperties>}
         >
           <Layer {...layerStyleCircle} />
-          <Layer {...layerStyleText} />
+          <Layer {...layerStyleAttractions} />
         </Source>
         {popupInfo && (
           <Popup
@@ -150,7 +147,7 @@ export const Map = () => {
                 <div>
                   <div style={{ borderRadius: '6px', overflow: 'hidden' }}>
                     <img
-                      src={'vite-reactts-eslint-prettier/images/testpopup.png'}
+                      src={'/vite-reactts-eslint-prettier/images/testpopup.png'}
                       alt="picplace"
                     />
                   </div>
@@ -173,8 +170,11 @@ export const Map = () => {
                       fontSize: '13px',
                       lineHeight: '16px',
                       color: '#248742',
+                      textTransform: 'capitalize',
                     }}
-                  >{`Аттракция`}</div>
+                  >
+                    {popupInfo.properties.poi_type_name}
+                  </div>
                   <div
                     style={{
                       fontFamily: 'Montserrat',
@@ -182,7 +182,9 @@ export const Map = () => {
                       lineHeight: '16px',
                       color: '#248742',
                     }}
-                  >{`Уникальное место`}</div>
+                  >
+                    {popupInfo.properties.scale_name}
+                  </div>
                 </div>
               </Link>
               <div
@@ -202,7 +204,7 @@ export const Map = () => {
                   }}
                 >
                   <img
-                    src={'vite-reactts-eslint-prettier/icons/redlike.svg'}
+                    src={'/vite-reactts-eslint-prettier/icons/redlike.svg'}
                     alt="like"
                   />
                 </div>
@@ -232,7 +234,7 @@ export const Map = () => {
                     height: '29px',
                   }}
                 >
-                  <img src={'vite-reactts-eslint-prettier/icons/car.svg'} alt="route" />
+                  <img src={'/vite-reactts-eslint-prettier/icons/car.svg'} alt="route" />
                 </div>
                 <div
                   style={{

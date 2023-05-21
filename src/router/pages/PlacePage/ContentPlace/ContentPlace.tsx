@@ -4,7 +4,7 @@ import { MdOutlineDone } from 'react-icons/md';
 import { RxCross2 } from 'react-icons/rx';
 import { MapPlace } from '../MapPlace';
 import { GeoJsonProperties } from 'geojson';
-import { countries, regions } from '../../../../data/ratio';
+import { countries, randomInteger, regions } from '../../../../data/ratio';
 import { Link } from 'react-router-dom';
 import testhotel1 from '../../../../../public/images/testhotelsnear1.png';
 import testhotel2 from '../../../../../public/images/testhotelsnear2.png';
@@ -14,8 +14,8 @@ import OpeningHours from './OpeningHours/OpeningHours';
 import { Button } from 'antd';
 import Comments from './Comments/Comments';
 import services from '../../../../data/tour_serviceGeo.json';
-
-const servicesPlaces = services.features.map((el) => el.properties);
+import occasions from '../../../../data/tour_eventGeo.json';
+import attractions from '../../../../data/09Geo.json';
 
 const comfort: any = [
   // { type: 'Парковка', isAvailable: true },
@@ -28,25 +28,25 @@ const comfort: any = [
 
 const hotels = [
   {
-    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
   },
   {
-    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: 'vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
@@ -58,6 +58,14 @@ interface ContentPlacePropsType {
 }
 
 const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
+  const servicesPlaces = services.features.map((el) => el.properties);
+  const occasionsPlaces = occasions.features.map((el) => el.properties);
+  const attractionsPlaces = attractions.features.map((el) => el.properties);
+
+  const num = randomInteger(0, attractions.features.length - 4);
+  const attractionsNear = attractionsPlaces.slice(num, num + 4);
+
+  const hotelsPlaces = attractionsPlaces.filter((el) => el.subtype_name_en === 'hotel');
   return (
     <div className={style.content}>
       <div className={style.content__container}>
@@ -66,7 +74,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
             <div className={style.col__item_left}>
               <p
                 className={style.description__title}
-              >{`Аттракция, Природные, Заповедник, Экстра`}</p>
+              >{`${info?.properties.type_name}, ${info?.properties.subtype_name}, ${info?.properties.scale_name}`}</p>
               <p className={style.description__text}>{info?.properties.description}</p>
             </div>
 
@@ -110,7 +118,8 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                         >
                           <img
                             src={
-                              './vite-reactts-eslint-prettier/images/testservicesnear.png'
+                              service.photo_link[0] ||
+                              '/vite-reactts-eslint-prettier/images/testservicesnear.png'
                             }
                             alt="pichotel"
                           />
@@ -138,27 +147,31 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
               <div className={style.services}>
                 <p className={style.services__header}>Мероприятия рядом</p>
                 <div className={style.services__body}>
-                  {/* {occasions.map((occasion, i) => (
+                  {occasionsPlaces.map((occasion, i) => (
                     <Link key={i} to={`/occasions`} className={style.services__item}>
                       <div>
                         <div
                           className={style.services__image}
                           style={{ borderRadius: '6px', overflow: 'hidden' }}
                         >
-                          <img src={occasion.image} alt="pichotel" />
+                          <img
+                            src={
+                              occasion.photo_link[0] ||
+                              '/vite-reactts-eslint-prettier/images/testservicesnear.png'
+                            }
+                            alt="pichotel"
+                          />
                         </div>
                       </div>
                       <div className={style.service__content}>
                         <div className={style.services__title}>{occasion.name}</div>
+                        <div className={style.services__text}>{`До места: ${5} км`}</div>
                         <div
                           className={style.services__text}
-                        >{`До места: ${occasion.distance} км`}</div>
-                        <div
-                          className={style.services__text}
-                        >{`Цена: ${occasion.price} руб./чел`}</div>
+                        >{`Цена: ${occasion.tickets_cost} руб./чел`}</div>
                       </div>
                     </Link>
-                  ))} */}
+                  ))}
                 </div>
                 <div className={style.services__more}>
                   <ShowAll text="Больше" size={13} weight={500} lineHeight={20} />
@@ -174,9 +187,10 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                 longitude={info?._geometry.coordinates[0]}
                 latitude={info?._geometry.coordinates[1]}
                 address={info?.properties.address}
-                city={info?.properties.city}
-                region={regions[info?.properties.regionID as keyof typeof regions]}
-                country={countries[info?.properties.countryID as keyof typeof countries]}
+                city={info?.properties.city_name}
+                region={info?.properties.region_name}
+                country={info?.properties.country_name}
+                phone={info?.properties.phone}
               />
             </div>
 
@@ -187,20 +201,25 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
             <div className={style.col__item}>
               <div className={style.hotelsnear}>
                 <p className={style.hotelsnear__header}>Отели рядом</p>
-                {hotels.map((hotel, i) => (
+                {hotelsPlaces.map((hotel, i) => (
                   <Link key={i} to={`/hotelsnear`} className={style.hotelsnear__item}>
                     <div>
                       <div
                         className={style.hotelsnear__image}
                         style={{ borderRadius: '6px', overflow: 'hidden' }}
                       >
-                        <img src={hotel.image} alt="pichotel" />
+                        <img
+                          src={`/vite-reactts-eslint-prettier/images/${hotel.photo_link[0]}`}
+                          alt="pichotel"
+                        />
                       </div>
                     </div>
-                    <div>
+                    <div className={style.hotelsnear__content}>
                       <div className={style.hotelsnear__title}>{hotel.name}</div>
-                      <div className={style.hotelsnear__text}>{`${hotel.address},`}</div>
-                      <div className={style.hotelsnear__text}>{hotel.country}</div>
+                      <div className={style.hotelsnear__text}>{`${
+                        hotel.address || 'Адрес не указан'
+                      },`}</div>
+                      <div className={style.hotelsnear__text}>{hotel.country_name}</div>
                     </div>
                   </Link>
                 ))}
@@ -213,20 +232,29 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
             <div className={style.col__item}>
               <div className={style.hotelsnear}>
                 <p className={style.hotelsnear__header}>Аттракции рядом</p>
-                {hotels.map((hotel, i) => (
-                  <Link key={i} to={`/hotelsnear`} className={style.hotelsnear__item}>
+                {attractionsNear.map((hotel, i) => (
+                  <Link
+                    key={i}
+                    to={`/attractionsnear`}
+                    className={style.hotelsnear__item}
+                  >
                     <div>
                       <div
                         className={style.hotelsnear__image}
                         style={{ borderRadius: '6px', overflow: 'hidden' }}
                       >
-                        <img src={hotel.image} alt="pichotel" />
+                        <img
+                          src={`/vite-reactts-eslint-prettier/images/${hotel.photo_link[0]}`}
+                          alt="pichotel"
+                        />
                       </div>
                     </div>
-                    <div>
+                    <div className={style.hotelsnear__content}>
                       <div className={style.hotelsnear__title}>{hotel.name}</div>
-                      <div className={style.hotelsnear__text}>{`${hotel.address},`}</div>
-                      <div className={style.hotelsnear__text}>{hotel.country}</div>
+                      <div className={style.hotelsnear__text}>{`${
+                        hotel.address || 'Адрес не указан'
+                      },`}</div>
+                      <div className={style.hotelsnear__text}>{hotel.country_name}</div>
                     </div>
                   </Link>
                 ))}

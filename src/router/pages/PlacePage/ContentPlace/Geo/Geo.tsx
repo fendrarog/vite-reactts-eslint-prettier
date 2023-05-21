@@ -9,6 +9,7 @@ interface GeoPropsType {
   city: string;
   region: string;
   country: string;
+  phone: string;
 }
 
 const Geo: React.FC<GeoPropsType> = ({
@@ -19,6 +20,7 @@ const Geo: React.FC<GeoPropsType> = ({
   city,
   region,
   country,
+  phone,
 }) => {
   return (
     <div className={style.geo__body}>
@@ -29,7 +31,7 @@ const Geo: React.FC<GeoPropsType> = ({
       <p className={style.map__text}>{address}</p>
       <p className={style.map__text}>{`${city}, ${region}`}</p>
       <p className={style.map__text}>{country}</p>
-      <p className={style.map__text}>{`+7 (800) 500-51-69`}</p>
+      <p className={style.map__text}>{phone}</p>
     </div>
   );
 };

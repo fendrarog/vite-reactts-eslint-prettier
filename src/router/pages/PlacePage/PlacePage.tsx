@@ -9,6 +9,7 @@ import ContentPlace from './ContentPlace/ContentPlace';
 export const PlacePage = () => {
   const location = useLocation();
   const { popupInfo } = location.state;
+
   console.log(popupInfo);
   const { id } = useParams();
   return (

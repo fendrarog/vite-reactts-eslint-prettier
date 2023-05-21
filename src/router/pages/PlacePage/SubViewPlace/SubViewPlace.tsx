@@ -12,17 +12,17 @@ import { GeoJsonProperties } from 'geojson';
 const options = [
   {
     alt: 'like',
-    img: 'vite-reactts-eslint-prettier/icons/Like.svg',
+    img: '/vite-reactts-eslint-prettier/icons/Like.svg',
     color: '#FF7B7B',
   },
   {
     alt: 'addPhoto',
-    img: 'vite-reactts-eslint-prettier/icons/AddPhoto.svg',
+    img: '/vite-reactts-eslint-prettier/icons/AddPhoto.svg',
     color: '#53B7FF',
   },
   {
     alt: 'share',
-    img: 'vite-reactts-eslint-prettier/icons/Share.svg',
+    img: '/vite-reactts-eslint-prettier/icons/Share.svg',
     color: '#53B7FF',
   },
 ];
@@ -52,9 +52,7 @@ const SubViewPlace: React.FC<SubViewPlacePropsType> = ({ info }) => {
           </div>
 
           <ShowAll
-            text={`Больше в ${
-              regions[info?.properties.regionID as keyof typeof regions]
-            }`}
+            text={`Больше в ${info?.properties.region_name}`}
             size={14}
             lineHeight={17}
             weight={400}

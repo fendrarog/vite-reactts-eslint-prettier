@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     <>
       <div className={style.logo}>
         <div className={style.logo__image}>
-          <img src={'vite-reactts-eslint-prettier/icons/logo.svg'} alt="logo" />
+          <img src={'/vite-reactts-eslint-prettier/icons/logo.svg'} alt="logo" />
         </div>
         <div className={style.logo__text}>Novitravel</div>
       </div>

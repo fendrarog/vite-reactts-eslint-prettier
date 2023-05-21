@@ -96,6 +96,23 @@
 .hotelsnear__image {
     border-radius: 10px;
     overflow: hidden;
+    height: 100px;
+    width: 100px;
+    flex: 0 1 30%;
+    & img {
+    width: 100%;  
+    height: 100%;  
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    -ms-interpolation-mode: nearest-neighbor;  /* IE */
+    image-rendering: crisp-edges; /* Стандартное свойство */
+}
+}
+.hotelsnear__content {
+    flex: 1 1 70%;
 }
 .hotelsnear__title {
     color: #248742;
@@ -103,16 +120,21 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    margin: 0 0 10px;
-    white-space: nowrap;
+    margin: 0 0 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 .hotelsnear__text {
     color: #565656;
     font-family: Montserrat;
     font-size: 13px;
     line-height: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .hotelsnear__more {
     display: flex;

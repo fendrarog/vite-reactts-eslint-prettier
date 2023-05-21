@@ -50,7 +50,7 @@ const Stories: React.FC = () => {
             <div key={story.story_id} className={style.body__item}>
               <div className={style.item__image}>
                 <img
-                  src={`vite-reactts-eslint-prettier/images${story.photo_link[0]}`}
+                  src={`/vite-reactts-eslint-prettier/images${story.photo_link[0]}`}
                   alt={story.name}
                 />
               </div>
