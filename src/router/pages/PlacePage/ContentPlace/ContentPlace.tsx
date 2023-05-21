@@ -28,25 +28,25 @@ const comfort: any = [
 
 const hotels = [
   {
-    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
   },
   {
-    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: '/vite-reactts-eslint-prettier/images/testhotelsnear1.png',
+    image: 'images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
@@ -117,10 +117,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                           style={{ borderRadius: '6px', overflow: 'hidden' }}
                         >
                           <img
-                            src={
-                              service.photo_link[0] ||
-                              '/vite-reactts-eslint-prettier/images/testservicesnear.png'
-                            }
+                            src={service.photo_link[0] || 'images/testservicesnear.png'}
                             alt="pichotel"
                           />
                         </div>
@@ -155,10 +152,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                           style={{ borderRadius: '6px', overflow: 'hidden' }}
                         >
                           <img
-                            src={
-                              occasion.photo_link[0] ||
-                              '/vite-reactts-eslint-prettier/images/testservicesnear.png'
-                            }
+                            src={occasion.photo_link[0] || '/images/testservicesnear.png'}
                             alt="pichotel"
                           />
                         </div>
@@ -208,10 +202,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                         className={style.hotelsnear__image}
                         style={{ borderRadius: '6px', overflow: 'hidden' }}
                       >
-                        <img
-                          src={`/vite-reactts-eslint-prettier/images/${hotel.photo_link[0]}`}
-                          alt="pichotel"
-                        />
+                        <img src={`/images/${hotel.photo_link[0]}`} alt="pichotel" />
                       </div>
                     </div>
                     <div className={style.hotelsnear__content}>
@@ -243,10 +234,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                         className={style.hotelsnear__image}
                         style={{ borderRadius: '6px', overflow: 'hidden' }}
                       >
-                        <img
-                          src={`/vite-reactts-eslint-prettier/images/${hotel.photo_link[0]}`}
-                          alt="pichotel"
-                        />
+                        <img src={`/images/${hotel.photo_link[0]}`} alt="pichotel" />
                       </div>
                     </div>
                     <div className={style.hotelsnear__content}>

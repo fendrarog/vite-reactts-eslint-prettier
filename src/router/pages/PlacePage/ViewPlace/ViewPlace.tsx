@@ -13,7 +13,7 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
     <div
       className={style.view}
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/vite-reactts-eslint-prettier/images${
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images${
           JSON.parse(info?.properties.photo_link)[0]
         }")`,
       }}
@@ -21,9 +21,7 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
       <div
         className={style.view__container}
         style={{
-          backgroundImage: `url("/vite-reactts-eslint-prettier/images${
-            JSON.parse(info?.properties.photo_link)[0]
-          }")`,
+          backgroundImage: `url("/images${JSON.parse(info?.properties.photo_link)[0]}")`,
         }}
       >
         <div className={style.body}>
@@ -48,7 +46,7 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
             <div
               className={style.photos}
               style={{
-                backgroundImage: `url("/vite-reactts-eslint-prettier/images${
+                backgroundImage: `url("/images${
                   JSON.parse(info?.properties.photo_link)[0]
                 }")`,
               }}

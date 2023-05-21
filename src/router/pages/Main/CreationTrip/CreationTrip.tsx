@@ -17,24 +17,24 @@ import icon6 from '../../../../../public/images/creation6.svg';
 const travelCreation = [
   {
     text: 'Открывай уникальные места',
-    icon: '/vite-reactts-eslint-prettier/images/creation1.svg',
+    icon: '/images/creation1.svg',
   },
-  { text: 'Бронируй жилье', icon: '/vite-reactts-eslint-prettier/images/creation2.svg' },
+  { text: 'Бронируй жилье', icon: '/images/creation2.svg' },
   {
     text: 'Находи экскурсии от местных жителей',
-    icon: '/vite-reactts-eslint-prettier/images/creation3.svg',
+    icon: '/images/creation3.svg',
   },
   {
     text: 'Принимай участие в культурных событиях',
-    icon: '/vite-reactts-eslint-prettier/images/creation4.svg',
+    icon: '/images/creation4.svg',
   },
   {
     text: 'Получай скидки от партнёров',
-    icon: '/vite-reactts-eslint-prettier/images/creation5.svg',
+    icon: '/images/creation5.svg',
   },
   {
     text: 'Вдохновляйся тревел историями путешественников',
-    icon: '/vite-reactts-eslint-prettier/images/creation6.svg',
+    icon: '/images/creation6.svg',
   },
 ];
 

@@ -4,6 +4,7 @@ import TitlePage from '../../../../components/Title';
 import ShowAll from '../../../../components/ShowAll/ShowAll';
 import extra from '../../../../data/extraGeo.json';
 import { randomInteger } from '../../../../data/ratio';
+import caif from '../../../../assets/images/01.png';
 
 const num = randomInteger(0, extra.features.length - 6);
 const extraPlaces = extra.features.slice(num, num + 6).map((el) => el.properties);
@@ -18,11 +19,8 @@ const ExtraordinaryPlaces: React.FC = () => {
           {extraPlaces.map((place, i) => (
             <div key={i} className={style.item}>
               <div className={style.image}>
-                <img
-                  src={`/vite-reactts-eslint-prettier/images${place.photo_link[0]}`}
-                  alt={'img'}
-                />
-                {/* <img src={gg} alt={'gg'} /> */}
+                {/* <img src={`/images${place.photo_link[0]}`} alt={'img'} /> */}
+                <img src={caif} alt={'img'} />
               </div>
               <div className={style.item__content}>
                 <h3 className={style.title}>{place.name}</h3>

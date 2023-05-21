@@ -49,10 +49,7 @@ const Stories: React.FC = () => {
           {stories.map((story) => (
             <div key={story.story_id} className={style.body__item}>
               <div className={style.item__image}>
-                <img
-                  src={`/vite-reactts-eslint-prettier/images${story.photo_link[0]}`}
-                  alt={story.name}
-                />
+                <img src={`/images${story.photo_link[0]}`} alt={story.name} />
               </div>
               <div className={style.item__content}>
                 <h3 className={style.item__title}>{story.name}</h3>
