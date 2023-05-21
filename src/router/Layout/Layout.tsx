@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { Input, Typography, Card, Row, Col, Layout as Lay } from 'antd';
+import { Outlet } from 'react-router-dom';
+import { Layout as Lay } from 'antd';
 import style from './Layout.module.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-const { Text, Title } = Typography;
 
 const { Header: Head, Content, Footer: Foot } = Lay;
 

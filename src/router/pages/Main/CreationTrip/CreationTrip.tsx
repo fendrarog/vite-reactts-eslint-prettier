@@ -15,12 +15,27 @@ import icon5 from '../../../../../public/images/creation5.svg';
 import icon6 from '../../../../../public/images/creation6.svg';
 
 const travelCreation = [
-  { text: 'Открывай уникальные места', icon: icon1 },
-  { text: 'Бронируй жилье', icon: icon2 },
-  { text: 'Находи экскурсии от местных жителей', icon: icon3 },
-  { text: 'Принимай участие в культурных событиях', icon: icon4 },
-  { text: 'Получай скидки от партнёров', icon: icon5 },
-  { text: 'Вдохновляйся тревел историями путешественников', icon: icon6 },
+  {
+    text: 'Открывай уникальные места',
+    icon: './vite-reactts-eslint-prettier/images/creation1.svg',
+  },
+  { text: 'Бронируй жилье', icon: './vite-reactts-eslint-prettier/images/creation2.svg' },
+  {
+    text: 'Находи экскурсии от местных жителей',
+    icon: './vite-reactts-eslint-prettier/images/creation3.svg',
+  },
+  {
+    text: 'Принимай участие в культурных событиях',
+    icon: './vite-reactts-eslint-prettier/images/creation4.svg',
+  },
+  {
+    text: 'Получай скидки от партнёров',
+    icon: './vite-reactts-eslint-prettier/images/creation5.svg',
+  },
+  {
+    text: 'Вдохновляйся тревел историями путешественников',
+    icon: './vite-reactts-eslint-prettier/images/creation6.svg',
+  },
 ];
 
 const CreationTrip: React.FC = () => {

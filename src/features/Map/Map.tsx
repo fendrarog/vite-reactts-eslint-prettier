@@ -149,7 +149,10 @@ export const Map = () => {
               >
                 <div>
                   <div style={{ borderRadius: '6px', overflow: 'hidden' }}>
-                    <img src={'./images/testpopup.png'} alt="picplace" />
+                    <img
+                      src={'./vite-reactts-eslint-prettier/images/testpopup.png'}
+                      alt="picplace"
+                    />
                   </div>
                 </div>
                 <div>
@@ -198,7 +201,10 @@ export const Map = () => {
                     justifyContent: 'center',
                   }}
                 >
-                  <img src={'./icons/redlike.svg'} alt="like" />
+                  <img
+                    src={'./vite-reactts-eslint-prettier/icons/redlike.svg'}
+                    alt="like"
+                  />
                 </div>
               </div>
               <div
@@ -226,7 +232,7 @@ export const Map = () => {
                     height: '29px',
                   }}
                 >
-                  <img src={'./icons/car.svg'} alt="route" />
+                  <img src={'./vite-reactts-eslint-prettier/icons/car.svg'} alt="route" />
                 </div>
                 <div
                   style={{

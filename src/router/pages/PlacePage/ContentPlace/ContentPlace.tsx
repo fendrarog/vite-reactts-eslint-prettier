@@ -8,101 +8,48 @@ import { countries, regions } from '../../../../data/ratio';
 import { Link } from 'react-router-dom';
 import testhotel1 from '../../../../../public/images/testhotelsnear1.png';
 import testhotel2 from '../../../../../public/images/testhotelsnear2.png';
-import testservice from '../../../../../public/images/testservicesnear.png';
 import ShowAll from '../../../../components/ShowAll/ShowAll';
 import Geo from './Geo/Geo';
 import OpeningHours from './OpeningHours/OpeningHours';
 import { Button } from 'antd';
-import { SlPencil } from 'react-icons/sl';
 import Comments from './Comments/Comments';
+import services from '../../../../data/tour_serviceGeo.json';
 
-const comfort = [
-  { type: 'Парковка', isAvailable: true },
-  { type: 'Туалеты', isAvailable: true },
-  { type: 'С домашними животными ', isAvailable: true },
-  { type: 'Wi-Fi', isAvailable: false },
-  { type: 'Банковские карты', isAvailable: true },
-  { type: 'Доступно для инвалидных колясок', isAvailable: true },
+const servicesPlaces = services.features.map((el) => el.properties);
+
+const comfort: any = [
+  // { type: 'Парковка', isAvailable: true },
+  // { type: 'Туалеты', isAvailable: true },
+  // { type: 'С домашними животными ', isAvailable: true },
+  // { type: 'Wi-Fi', isAvailable: false },
+  // { type: 'Банковские карты', isAvailable: true },
+  // { type: 'Доступно для инвалидных колясок', isAvailable: true },
 ];
 
 const hotels = [
   {
-    image: testhotel1,
+    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: testhotel2,
+    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
   },
   {
-    image: testhotel1,
+    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Гранд Отель',
     address: 'ул.Карачаевская, 62, 1-я линия, Домбай 369241',
     country: 'Россия',
   },
   {
-    image: testhotel2,
+    image: './vite-reactts-eslint-prettier/images/testhotelsnear1.png',
     name: 'Отель "Белалакая"',
     address: 'A155, 118, Домбай 369232',
     country: 'Россия',
-  },
-];
-
-const services = [
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-];
-
-const occasions = [
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
-  },
-  {
-    image: testservice,
-    name: 'Рафтинг',
-    distance: 5,
-    price: 2000,
   },
 ];
 
@@ -125,7 +72,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
 
             <div className={style.col__item_left}>
               <div className={style.comfort}>
-                {comfort.map((el) => (
+                {comfort.map((el: any) => (
                   <div key={el.type} className={style.comfort__item}>
                     <div>
                       {el.isAvailable ? (
@@ -154,24 +101,29 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
               <div className={style.services}>
                 <p className={style.services__header}>Услуги рядом</p>
                 <div className={style.services__body}>
-                  {services.map((service, i) => (
+                  {servicesPlaces.map((service, i) => (
                     <Link key={i} to={`/services`} className={style.services__item}>
                       <div>
                         <div
                           className={style.services__image}
                           style={{ borderRadius: '6px', overflow: 'hidden' }}
                         >
-                          <img src={service.image} alt="pichotel" />
+                          <img
+                            src={
+                              './vite-reactts-eslint-prettier/images/testservicesnear.png'
+                            }
+                            alt="pichotel"
+                          />
                         </div>
                       </div>
                       <div className={style.service__content}>
-                        <div className={style.services__title}>{service.name}</div>
+                        <div className={style.services__title}>
+                          {service.subtype_name}
+                        </div>
+                        <div className={style.services__text}>{`До места: ${5} км`}</div>
                         <div
                           className={style.services__text}
-                        >{`До места: ${service.distance} км`}</div>
-                        <div
-                          className={style.services__text}
-                        >{`Цена: ${service.price} руб./чел`}</div>
+                        >{`Цена: ${service.turusluga_cost} руб./чел`}</div>
                       </div>
                     </Link>
                   ))}
@@ -186,7 +138,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
               <div className={style.services}>
                 <p className={style.services__header}>Мероприятия рядом</p>
                 <div className={style.services__body}>
-                  {occasions.map((occasion, i) => (
+                  {/* {occasions.map((occasion, i) => (
                     <Link key={i} to={`/occasions`} className={style.services__item}>
                       <div>
                         <div
@@ -206,7 +158,7 @@ const ContentPlace: React.FC<ContentPlacePropsType> = ({ info }) => {
                         >{`Цена: ${occasion.price} руб./чел`}</div>
                       </div>
                     </Link>
-                  ))}
+                  ))} */}
                 </div>
                 <div className={style.services__more}>
                   <ShowAll text="Больше" size={13} weight={500} lineHeight={20} />

@@ -41,7 +41,10 @@ const Comments: React.FC = () => {
                 <div className={style.row__user}>
                   <div className={style.user__avatar}>
                     <img
-                      src={comment.user_avatar ? comment.user_avatar : testavatar1}
+                      src={
+                        comment.user_avatar ||
+                        './vite-reactts-eslint-prettier/images/testavatar1.png'
+                      }
                       alt="avatar"
                     />
                   </div>

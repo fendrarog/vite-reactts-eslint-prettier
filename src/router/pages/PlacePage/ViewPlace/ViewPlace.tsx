@@ -12,13 +12,13 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
     <div
       className={style.view}
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images${info?.properties.photo_link}")`,
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images${info?.properties.photo_link}")`,
       }}
     >
       <div
         className={style.view__container}
         style={{
-          backgroundImage: `url("/images${info?.properties.photo_link}")`,
+          backgroundImage: `url("../images${info?.properties.photo_link}")`,
         }}
       >
         <div className={style.body}>
@@ -42,7 +42,12 @@ const ViewPlace: React.FC<ViewPlacePropsType> = ({ info }) => {
             </div>
           </div>
           <div className={style.bottom}>
-            <div className={style.photos}>
+            <div
+              className={style.photos}
+              style={{
+                backgroundImage: `url("../images${info?.properties.photo_link}")`,
+              }}
+            >
               <p className={style.photos__amount}>{`20`}</p>
               <p>Фото</p>
             </div>
